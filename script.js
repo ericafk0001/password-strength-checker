@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     if (password.length >= 8) {
       strength += 1;
     }
-
+    //regex
     if (/[a-z]/.test(password)) {
       strength += 1;
     }
