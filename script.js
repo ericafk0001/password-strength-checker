@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     if (/[A-Z]/.test(password)) {
       strength += 1;
     }
-
+    //check one digit
     if (/\d/.test(password)) {
       strength += 1;
     }
@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     switch (strength) {
       case 5:
-        return "Very Strong";
-      case 4:
         return "Strong";
+      case 4:
+        return "Good";
       case 3:
         return "Moderate";
       case 2:
@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   passwordField.addEventListener("input", () => {
     const strength = checkPasswordStrength(passwordField.value);
+
     strengthIndicator.textContent = `Password Strength: ${strength}`;
   });
 });
